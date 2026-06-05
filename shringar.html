@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bal Gopal Mukut & Bansuri - Sacred Shringar Collection | Krishna Collection</title>
+    <meta name="description" content="Shop premium jeweled mukuts (crowns) and elegant gold-plated bansuris (flutes) decorated with peacock feathers for Bal Gopal Laddu Gopal deity.">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.png" alt="Krishna Collection Logo" class="logo-img" onerror="this.src='https://placehold.co/100x100?text=Krishna'">
+            </a>
+            
+            <nav class="nav" id="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="poshak.html" class="nav-link">Poshak</a>
+                <a href="singhasan.html" class="nav-link">Singhasan & Beds</a>
+                <a href="shringar.html" class="nav-link active">Shringar</a>
+                <a href="contact.html" class="nav-link">Contact & Feedback</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="cart-icon-btn" onclick="openCartDrawer()" aria-label="Open Shopping Cart">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-badge" id="cart-badge" style="display: none;">0</span>
+                </button>
+                <div class="mobile-nav-toggle" onclick="toggleMobileNav()">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="hero" style="padding: 3rem 0; background: linear-gradient(135deg, rgba(9, 108, 108, 0.08) 0%, rgba(212, 175, 87, 0.05) 100%);">
+        <div class="container" style="text-align: center;">
+            <span class="hero-tagline">🦚 Divine Shringar Ornaments</span>
+            <h2 class="hero-title" style="font-size: 2.75rem; margin-bottom: 0.5rem;">Mukut & <span>Bansuri</span></h2>
+            <p class="hero-desc" style="margin-bottom: 0;">Complete the royal look of your Laddu Gopal with our premium hand-designed stone-studded crowns and designer flutes.</p>
+        </div>
+    </section>
+
+    <!-- Products System -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-filter-bar">
+                <span style="font-weight: 600; color: var(--primary-dark);" id="products-count-label">Showing 5 premium shringar items</span>
+                <div class="sort-select-wrapper">
+                    <select id="shringar-sort" onchange="sortShringar()">
+                        <option value="default">Default Sorting</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid" id="shringar-products-grid">
+                <!-- Premium Pearl & Feather Mukut -->
+                <div class="product-card" data-price="349">
+                    <div class="product-badge">Divine Shringar</div>
+                    <div class="product-image-container">
+                        <img src="assets/mukut_shringar.png" alt="Premium Pearl & Feather Mukut" class="product-img" onerror="this.src='https://placehold.co/250x250?text=Jeweled+Mukut'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-cat">Mukut (Crown)</span>
+                        <h4 class="product-title">Premium Pearl & Feather Mukut</h4>
+                        <div class="product-rating">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">₹349</span>
+                            <button class="add-to-cart-btn" onclick="addToCart('mukut-01')" aria-label="Add to Cart"><i class="ri-shopping-bag-line"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Royal Blue Diamond Mukut -->
+                <div class="product-card" data-price="499">
+                    <div class="product-badge">Premium Pick</div>
+                    <div class="product-image-container">
+                        <img src="assets/mukut_royal_blue.jpg" alt="Royal Blue Diamond Mukut" class="product-img" onerror="this.src='https://placehold.co/250x250?text=Blue+Diamond+Mukut'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-cat">Mukut (Crown)</span>
+                        <h4 class="product-title">Royal Blue Diamond Mukut</h4>
+                        <div class="product-rating">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">₹499</span>
+                            <button class="add-to-cart-btn" onclick="addToCart('mukut-02')" aria-label="Add to Cart"><i class="ri-shopping-bag-line"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Designer Peacock Pearl Mukut -->
+                <div class="product-card" data-price="599">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-image-container">
+                        <img src="assets/mukut_peacock_designer.jpg" alt="Designer Peacock Pearl Mukut" class="product-img" onerror="this.src='https://placehold.co/250x250?text=Peacock+Pearl+Mukut'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-cat">Mukut (Crown)</span>
+                        <h4 class="product-title">Designer Peacock Pearl Mukut</h4>
+                        <div class="product-rating">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">₹599</span>
+                            <button class="add-to-cart-btn" onclick="addToCart('mukut-03')" aria-label="Add to Cart"><i class="ri-shopping-bag-line"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vrindavan Peacock Pagdi Mukut -->
+                <div class="product-card" data-price="649">
+                    <div class="product-badge">Special Edition</div>
+                    <div class="product-image-container">
+                        <img src="assets/mukut_peacock_stand.jpg" alt="Vrindavan Peacock Pagdi Mukut" class="product-img" onerror="this.src='https://placehold.co/250x250?text=Peacock+Pagdi+Mukut'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-cat">Mukut (Crown)</span>
+                        <h4 class="product-title">Vrindavan Peacock Pagdi Mukut</h4>
+                        <div class="product-rating">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">₹649</span>
+                            <button class="add-to-cart-btn" onclick="addToCart('mukut-04')" aria-label="Add to Cart"><i class="ri-shopping-bag-line"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Royal Gold Plated Jeweled Bansuri -->
+                <div class="product-card" data-price="199" id="bansuri">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image-container">
+                        <img src="assets/bansuri_gold.png" alt="Royal Gold Plated Jeweled Bansuri" class="product-img" onerror="this.src='https://placehold.co/250x250?text=Gold+Bansuri'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-cat">Flute (Bansuri)</span>
+                        <h4 class="product-title">Royal Gold Plated Jeweled Bansuri</h4>
+                        <div class="product-rating">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-line"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">₹199</span>
+                            <button class="add-to-cart-btn" onclick="addToCart('bansuri-01')" aria-label="Add to Cart"><i class="ri-shopping-bag-line"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>Krishna Collection</h2>
+                <p>Premium online store providing handcrafted dresses, designer beds, elegant wooden thrones, crowns, and accessories for Laddu Gopal (Bal Gopal) deity.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="social-link"><i class="ri-pinterest-line"></i></a>
+                    <a href="#" class="social-link"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="poshak.html">Poshak</a></li>
+                    <li><a href="singhasan.html">Singhasan & Beds</a></li>
+                    <li><a href="shringar.html">Shringar Ornaments</a></li>
+                    <li><a href="contact.html">Contact & Feedback</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Shop Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="poshak.html">Bal Gopal Clothes</a></li>
+                    <li><a href="singhasan.html">Golden Thrones</a></li>
+                    <li><a href="singhasan.html">Comfortable Beds</a></li>
+                    <li><a href="shringar.html">Mukut & Crowns</a></li>
+                    <li><a href="shringar.html">Jeweled Flutes</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul class="footer-links" style="color: rgba(255, 255, 255, 0.7);">
+                    <li><i class="ri-map-pin-line" style="color: var(--accent);"></i> 108 Vrindavan Heights, Mathura Road, Vrindavan, UP, India</li>
+                    <li><i class="ri-phone-line" style="color: var(--accent);"></i> +91 98765 43210</li>
+                    <li><i class="ri-mail-line" style="color: var(--accent);"></i> support@krishnacollection.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Krishna Collection. Handcrafted with Love & Devotion. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- Supabase Database Integrations -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="db.js"></script>
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+    <script>
+        function sortShringar() {
+            const select = document.getElementById('shringar-sort');
+            const grid = document.getElementById('shringar-products-grid');
+            const cards = Array.from(grid.getElementsByClassName('product-card'));
+            
+            if (select.value === 'low-high') {
+                cards.sort((a, b) => parseInt(a.getAttribute('data-price')) - parseInt(b.getAttribute('data-price')));
+            } else if (select.value === 'high-low') {
+                cards.sort((a, b) => parseInt(b.getAttribute('data-price')) - parseInt(a.getAttribute('data-price')));
+            }
+            
+            grid.innerHTML = '';
+            cards.forEach(card => grid.appendChild(card));
+        }
+
+        function toggleMobileNav() {
+            const nav = document.getElementById('main-nav');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '100%';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.backgroundColor = '#fff';
+                nav.style.padding = '1.5rem';
+                nav.style.boxShadow = '0 10px 15px rgba(0,0,0,0.05)';
+                nav.style.gap = '1rem';
+                nav.style.borderBottom = '1px solid var(--border-color)';
+            }
+        }
+    </script>
+</body>
+</html>

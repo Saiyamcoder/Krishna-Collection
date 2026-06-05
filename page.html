@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page - Krishna Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .custom-content-section {
+            padding: 5rem 0;
+            background-color: var(--bg-light);
+            min-height: 50vh;
+        }
+        .custom-content-box {
+            background-color: #fff;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .custom-content-box h1, .custom-content-box h2, .custom-content-box h3 {
+            color: var(--primary-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .custom-content-box p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+        .custom-content-box img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.png" alt="Krishna Collection Logo" class="logo-img" onerror="this.src='https://placehold.co/100x100?text=Krishna'">
+            </a>
+            
+            <nav class="nav" id="main-nav">
+                <!-- Populated dynamically -->
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="cart-icon-btn" onclick="openCartDrawer()" aria-label="Open Shopping Cart">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-badge" id="cart-badge" style="display: none;">0</span>
+                </button>
+                <div class="mobile-nav-toggle" onclick="toggleMobileNav()">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="hero" id="page-banner" style="padding: 4rem 0; background: linear-gradient(135deg, rgba(9, 108, 108, 0.08) 0%, rgba(212, 175, 87, 0.05) 100%);">
+        <div class="container" style="text-align: center;">
+            <span class="hero-tagline" id="page-subtitle">✨ Dynamic Content</span>
+            <h2 class="hero-title" id="page-title" style="font-size: 2.75rem; margin-bottom: 0.5rem;">Loading <span>Page</span>...</h2>
+            <p class="hero-desc" id="page-desc" style="margin-bottom: 0;">Please wait while we load the page information.</p>
+        </div>
+    </section>
+
+    <!-- Page Content Section -->
+    <section class="custom-content-section">
+        <div class="container">
+            <div class="custom-content-box" id="page-content-body">
+                <div style="text-align: center; padding: 4rem 0;">
+                    <i class="ri-loader-3-line" style="font-size: 3rem; color: var(--primary); display: inline-block; animation: spin 2s infinite linear;"></i>
+                    <p>Loading divine content...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>Krishna Collection</h2>
+                <p>Premium online store providing handcrafted dresses, designer beds, elegant wooden thrones, crowns, and accessories for Laddu Gopal (Bal Gopal) deity.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="social-link"><i class="ri-pinterest-line"></i></a>
+                    <a href="#" class="social-link"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="poshak.html">Poshak</a></li>
+                    <li><a href="singhasan.html">Singhasan & Beds</a></li>
+                    <li><a href="shringar.html">Shringar Ornaments</a></li>
+                    <li><a href="contact.html">Contact & Feedback</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Shop Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="poshak.html">Bal Gopal Clothes</a></li>
+                    <li><a href="singhasan.html">Golden Thrones</a></li>
+                    <li><a href="singhasan.html">Comfortable Beds</a></li>
+                    <li><a href="shringar.html">Mukut & Crowns</a></li>
+                    <li><a href="shringar.html">Jeweled Flutes</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul class="footer-links" style="color: rgba(255, 255, 255, 0.7);">
+                    <li><i class="ri-map-pin-line" style="color: var(--accent);"></i> 108 Vrindavan Heights, Mathura Road, Vrindavan, UP, India</li>
+                    <li><i class="ri-phone-line" style="color: var(--accent);"></i> +91 98765 43210</li>
+                    <li><i class="ri-mail-line" style="color: var(--accent);"></i> support@krishnacollection.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Krishna Collection. Handcrafted with Love & Devotion. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="db.js"></script>
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Retrieve page ID from URL query parameters
+            const params = new URLSearchParams(window.location.search);
+            const pageId = params.get('id');
+            
+            if (!pageId) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            try {
+                const page = await dbGetPage(pageId);
+                if (!page) {
+                    document.getElementById('page-title').innerHTML = "Page Not Found";
+                    document.getElementById('page-desc').innerHTML = "The page you are looking for does not exist.";
+                    document.getElementById('page-content-body').innerHTML = "<p style='text-align: center;'>Sorry, we couldn't find this page in our database.</p>";
+                    return;
+                }
+                
+                // Update elements
+                document.title = `${page.title} - Krishna Collection`;
+                document.getElementById('page-subtitle').innerText = page.subtitle || "Divine Collection Page";
+                document.getElementById('page-title').innerHTML = page.title;
+                document.getElementById('page-desc').innerText = page.description || "";
+                
+                // Update custom banner background image if any
+                if (page.hero_image) {
+                    const banner = document.getElementById('page-banner');
+                    banner.style.background = `linear-gradient(rgba(9, 108, 108, 0.8), rgba(9, 108, 108, 0.7)), url('${page.hero_image}') no-repeat center center / cover`;
+                    banner.style.color = '#fff';
+                    document.getElementById('page-title').style.color = 'var(--accent)';
+                    document.getElementById('page-desc').style.color = 'rgba(255,255,255,0.9)';
+                    document.getElementById('page-subtitle').style.color = 'var(--accent)';
+                }
+                
+                // Render Page Content Body
+                const bodyEl = document.getElementById('page-content-body');
+                const contentHtml = page.content && page.content.body_html ? page.content.body_html : `<p>${page.description || 'Welcome to this custom page.'}</p>`;
+                bodyEl.innerHTML = contentHtml;
+                
+            } catch (err) {
+                console.error("Error rendering page:", err);
+                document.getElementById('page-content-body').innerHTML = `<p>Error loading page content: ${err.message}</p>`;
+            }
+        });
+        
+        function toggleMobileNav() {
+            const nav = document.getElementById('main-nav');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '100%';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.backgroundColor = '#fff';
+                nav.style.padding = '1.5rem';
+                nav.style.boxShadow = '0 10px 15px rgba(0,0,0,0.05)';
+                nav.style.gap = '1rem';
+                nav.style.borderBottom = '1px solid var(--border-color)';
+            }
+        }
+    </script>
+</body>
+</html>

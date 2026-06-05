@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Collection - Premium Bal Gopal Clothes & Shringar Items</title>
+    <meta name="description"
+        content="Shop the finest quality designer clothes (poshak), wooden thrones (singhasan), beds (palag), crowns (mukut), and flutes (bansuri) for Bal Gopal Laddu Gopal deity.">
+    <!-- Remix Icons for premium iconography -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link" id="nav-logo">
+                <img src="assets/logo.png" alt="Krishna Collection Logo" class="logo-img"
+                    onerror="this.src='https://placehold.co/100x100?text=Krishna'">
+            </a>
+
+            <nav class="nav" id="main-nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="poshak.html" class="nav-link">Poshak</a>
+                <a href="singhasan.html" class="nav-link">Singhasan & Beds</a>
+                <a href="shringar.html" class="nav-link">Shringar</a>
+                <a href="contact.html" class="nav-link">Contact & Feedback</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-icon-btn" onclick="openCartDrawer()" aria-label="Open Shopping Cart"
+                    id="header-cart-btn">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-badge" id="cart-badge" style="display: none;">0</span>
+                </button>
+                <div class="mobile-nav-toggle" id="mobile-toggle" onclick="toggleMobileNav()">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-tagline">✨ Pure Handcrafted Devotion</span>
+                <h2 class="hero-title">Decorate Your <span>Bal Gopal</span> With Divine Royal Splendor</h2>
+                <p class="hero-desc">Explore our hand-selected collections of premium designer peacock-feather dresses,
+                    handcrafted royal golden beds, thrones, and jeweled flutes made specifically for Laddu Gopal.</p>
+                <div class="hero-actions">
+                    <a href="poshak.html" class="btn btn-primary" id="hero-btn-shop">Shop Poshak Now</a>
+                    <a href="#featured-products" class="btn btn-secondary">Explore Ornaments</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-circle-bg"></div>
+                <img src="assets/poshak_royal.png" alt="Bal Gopal Royal Dress" class="hero-main-img"
+                    onerror="this.src='https://placehold.co/400x400?text=Royal+Poshak'">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-quick" id="categories-section">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="section-subtitle">Sacred Collections</span>
+                <h3 class="section-title">Shop By Categories</h3>
+            </div>
+
+            <div class="categories-grid">
+                <a href="poshak.html" class="category-card" id="cat-card-poshak">
+                    <div class="category-icon"><i class="ri-shirt-line"></i></div>
+                    <span class="category-name">Bal Gopal Poshak</span>
+                    <span class="category-count">Designer Clothes</span>
+                </a>
+
+                <a href="singhasan.html" class="category-card" id="cat-card-singhasan">
+                    <div class="category-icon"><i class="ri-hotel-bed-line"></i></div>
+                    <span class="category-name">Singhasan & Beds</span>
+                    <span class="category-count">Wooden Handcrafted Thrones</span>
+                </a>
+
+                <a href="shringar.html" class="category-card" id="cat-card-shringar">
+                    <div class="category-icon"><i class="ri-vip-crown-line"></i></div>
+                    <span class="category-name">Mukut & Shringar</span>
+                    <span class="category-count">Pearls & Crowns</span>
+                </a>
+
+                <a href="shringasans-flute" class="category-card"
+                    onclick="event.preventDefault(); window.location.href='shringar.html#bansuri'">
+                    <div class="category-icon"><i class="ri-music-2-line"></i></div>
+                    <span class="category-name">Flutes (Bansuri)</span>
+                    <span class="category-count">Jeweled Ornaments</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Products Section -->
+    <section class="products-section" id="featured-products">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="section-subtitle">Featured Highlights</span>
+                <h3 class="section-title">Divine Best Sellers</h3>
+            </div>
+
+            <div class="products-filter-bar">
+                <div class="filter-tabs">
+                    <div class="filter-tab active" onclick="filterHomeProducts('all')">Show All</div>
+                    <div class="filter-tab" onclick="filterHomeProducts('poshak')">Poshak</div>
+                    <div class="filter-tab" onclick="filterHomeProducts('singhasan')">Singhasan & Beds</div>
+                    <div class="filter-tab" onclick="filterHomeProducts('shringar')">Mukut & Bansuri</div>
+                </div>
+            </div>
+
+            <div class="products-grid" id="home-products-grid">
+                <!-- Royal Peacock Designer Poshak -->
+                <div class="product-card" data-category="poshak">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-image-container">
+                        <img src="assets/poshak_royal.png" alt="Royal Peacock Designer Poshak" class="product-img"
+                            onerror="this.src='https://placehold.co/250x250?text=Royal+Poshak'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-cat">Poshak</span>
+                        <h4 class="product-title">Royal Peacock Designer Poshak</h4>
+                        <div class="product-rating">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">₹799</span>
+                            <button class="add-to-cart-btn" onclick="addToCart('poshak-01')" aria-label="Add to Cart"><i
+                                    class="ri-shopping-bag-line"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Premium Velvet Pearl Poshak -->
+                <div class="product-card" data-category="poshak">
+                    <div class="product-badge">New Arrival</div>
+                    <div class="product-image-container">
+                        <img src="assets/poshak_velvet.png" alt="Premium Velvet Pearl Poshak" class="product-img"
+                            onerror="this.src='https://placehold.co/250x250?text=Velvet+Poshak'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-cat">Poshak</span>
+                        <h4 class="product-title">Premium Velvet Pearl Poshak</h4>
+                        <div class="product-rating">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">₹999</span>
+                            <button class="add-to-cart-btn" onclick="addToCart('poshak-02')" aria-label="Add to Cart"><i
+                                    class="ri-shopping-bag-line"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Handcrafted Golden Singhasan -->
+                <div class="product-card" data-category="singhasan">
+                    <div class="product-badge">Divine Choice</div>
+                    <div class="product-image-container">
+                        <img src="assets/singhasan_royal.png" alt="Handcrafted Golden Singhasan" class="product-img"
+                            onerror="this.src='https://placehold.co/250x250?text=Golden+Singhasan'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-cat">Singhasan</span>
+                        <h4 class="product-title">Handcrafted Golden Singhasan</h4>
+                        <div class="product-rating">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">₹1899</span>
+                            <button class="add-to-cart-btn" onclick="addToCart('singhasan-01')"
+                                aria-label="Add to Cart"><i class="ri-shopping-bag-line"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Premium Velvet Laddu Gopal Palag -->
+                <div class="product-card" data-category="singhasan">
+                    <div class="product-badge">Trending</div>
+                    <div class="product-image-container">
+                        <img src="assets/palag_bed.png" alt="Premium Velvet Laddu Gopal Palag" class="product-img"
+                            onerror="this.src='https://placehold.co/250x250?text=Velvet+Palag'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-cat">Singhasan & Beds</span>
+                        <h4 class="product-title">Premium Velvet Laddu Gopal Palag</h4>
+                        <div class="product-rating">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">₹1249</span>
+                            <button class="add-to-cart-btn" onclick="addToCart('palag-01')" aria-label="Add to Cart"><i
+                                    class="ri-shopping-bag-line"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Premium Pearl & Feather Mukut -->
+                <div class="product-card" data-category="shringar">
+                    <div class="product-badge">Divine Shringar</div>
+                    <div class="product-image-container">
+                        <img src="assets/mukut_shringar.png" alt="Premium Pearl & Feather Mukut" class="product-img"
+                            onerror="this.src='https://placehold.co/250x250?text=Jeweled+Mukut'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-cat">Shringar Ornaments</span>
+                        <h4 class="product-title">Premium Pearl & Feather Mukut</h4>
+                        <div class="product-rating">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">₹349</span>
+                            <button class="add-to-cart-btn" onclick="addToCart('mukut-01')" aria-label="Add to Cart"><i
+                                    class="ri-shopping-bag-line"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Designer Peacock Pearl Mukut -->
+                <div class="product-card" data-category="shringar">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-image-container">
+                        <img src="assets/mukut_peacock_designer.jpg" alt="Designer Peacock Pearl Mukut"
+                            class="product-img"
+                            onerror="this.src='https://placehold.co/250x250?text=Peacock+Pearl+Mukut'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-cat">Shringar Ornaments</span>
+                        <h4 class="product-title">Designer Peacock Pearl Mukut</h4>
+                        <div class="product-rating">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">₹599</span>
+                            <button class="add-to-cart-btn" onclick="addToCart('mukut-03')" aria-label="Add to Cart"><i
+                                    class="ri-shopping-bag-line"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Royal Gold Plated Jeweled Bansuri -->
+                <div class="product-card" data-category="shringar">
+                    <div class="product-badge">Popular</div>
+                    <div class="product-image-container">
+                        <img src="assets/bansuri_gold.png" alt="Royal Gold Plated Jeweled Bansuri" class="product-img"
+                            onerror="this.src='https://placehold.co/250x250?text=Gold+Bansuri'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-cat">Shringar Ornaments</span>
+                        <h4 class="product-title">Royal Gold Plated Jeweled Bansuri</h4>
+                        <div class="product-rating">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-line"></i>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">₹199</span>
+                            <button class="add-to-cart-btn" onclick="addToCart('bansuri-01')"
+                                aria-label="Add to Cart"><i class="ri-shopping-bag-line"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Showcase -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title-wrapper">
+                <span class="section-subtitle">Devotee Feedback</span>
+                <h3 class="section-title">Words of Love & Devotion</h3>
+            </div>
+
+            <div class="reviews-slider" id="reviews-home-slider">
+                <div class="review-slide-card">
+                    <div class="product-rating">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                    <p class="review-text">"Bohot hi sundar poshak hai! Kapde ki quality bilkul premium hai aur mere
+                        Laddu Gopal isme bohot pyaare lagte hain. Delivery bhi time par hui."</p>
+                    <div class="review-user">
+                        <div class="review-avatar">A</div>
+                        <div class="review-user-info">
+                            <h4>Aarti Sharma</h4>
+                            <p>Verified Devotee</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-slide-card">
+                    <div class="product-rating">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                    <p class="review-text">"The golden Singhasan is absolutely magnificent! Handcrafted to perfection.
+                        It fits nicely in our home temple."</p>
+                    <div class="review-user">
+                        <div class="review-avatar">R</div>
+                        <div class="review-user-info">
+                            <h4>Ramesh Patel</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-slide-card">
+                    <div class="product-rating">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                            class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                    <p class="review-text">"Bansuri aur Mukut design bohot pyaara hai! It has a royal touch. Recommended
+                        to all devotees looking for standard quality."</p>
+                    <div class="review-user">
+                        <div class="review-avatar">K</div>
+                        <div class="review-user-info">
+                            <h4>Kiran Joshi</h4>
+                            <p>Premium Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>Krishna Collection</h2>
+                <p>Premium online store providing handcrafted dresses, designer beds, elegant wooden thrones, crowns,
+                    and accessories for Laddu Gopal (Bal Gopal) deity.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="social-link" aria-label="Pinterest"><i class="ri-pinterest-line"></i></a>
+                    <a href="#" class="social-link" aria-label="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="poshak.html">Poshak</a></li>
+                    <li><a href="singhasan.html">Singhasan & Beds</a></li>
+                    <li><a href="shringar.html">Shringar Ornaments</a></li>
+                    <li><a href="contact.html">Contact & Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Shop Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="poshak.html">Bal Gopal Clothes</a></li>
+                    <li><a href="singhasan.html">Golden Thrones</a></li>
+                    <li><a href="singhasan.html">Comfortable Beds</a></li>
+                    <li><a href="shringar.html">Mukut & Crowns</a></li>
+                    <li><a href="shringar.html">Jeweled Flutes</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul class="footer-links" style="color: rgba(255, 255, 255, 0.7);">
+                    <li><i class="ri-map-pin-line" style="color: var(--accent);"></i> 108 Vrindavan Heights, Mathura
+                        Road, Vrindavan, UP, India</li>
+                    <li><i class="ri-phone-line" style="color: var(--accent);"></i> +91 98765 43210</li>
+                    <li><i class="ri-mail-line" style="color: var(--accent);"></i> support@krishnacollection.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Krishna Collection. Handcrafted with Love & Devotion. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- Supabase Database Integrations -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="db.js"></script>
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Category Filter Logic on Home Page
+        // Category Filter Logic on Home Page (Case-Insensitive)
+        function filterHomeProducts(category) {
+            const normalizedCategory = category.toLowerCase();
+            // Update Tab active classes
+            const tabs = document.querySelectorAll('.filter-tab');
+            tabs.forEach(tab => {
+                const tabText = tab.innerText.toLowerCase();
+                if ((normalizedCategory === 'all' && tabText.includes('all')) ||
+                    (tabText.includes(normalizedCategory))) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+            // Filter cards
+            const cards = document.querySelectorAll('#home-products-grid .product-card');
+            cards.forEach(card => {
+                const cardCat = (card.getAttribute('data-category') || 'product').toLowerCase();
+                if (normalizedCategory === 'all' || cardCat.includes(normalizedCategory)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Toggle Mobile Navigation Panel
+        function toggleMobileNav() {
+            const nav = document.getElementById('main-nav');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '100%';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.backgroundColor = '#fff';
+                nav.style.padding = '1.5rem';
+                nav.style.boxShadow = '0 10px 15px rgba(0,0,0,0.05)';
+                nav.style.gap = '1rem';
+                nav.style.borderBottom = '1px solid var(--border-color)';
+            }
+        }
+    </script>
+</body>
+
+</html>
