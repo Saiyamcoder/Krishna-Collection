@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Feedback - Krishna Collection | Vrindavan</title>
+    <meta name="description" content="Reach out to Krishna Collection Vrindavan. Submit feedback, request custom clothes (poshak) for Bal Gopal, or find our store details.">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.png" alt="Krishna Collection Logo" class="logo-img" onerror="this.src='https://placehold.co/100x100?text=Krishna'">
+            </a>
+            
+            <nav class="nav" id="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="poshak.html" class="nav-link">Poshak</a>
+                <a href="singhasan.html" class="nav-link">Singhasan & Beds</a>
+                <a href="shringar.html" class="nav-link">Shringar</a>
+                <a href="contact.html" class="nav-link active">Contact & Feedback</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="cart-icon-btn" onclick="openCartDrawer()" aria-label="Open Shopping Cart">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-badge" id="cart-badge" style="display: none;">0</span>
+                </button>
+                <div class="mobile-nav-toggle" onclick="toggleMobileNav()">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="hero" style="padding: 3rem 0; background: linear-gradient(135deg, rgba(9, 108, 108, 0.08) 0%, rgba(212, 175, 87, 0.05) 100%);">
+        <div class="container" style="text-align: center;">
+            <span class="hero-tagline">📞 Open Communication</span>
+            <h2 class="hero-title" style="font-size: 2.75rem; margin-bottom: 0.5rem;">Contact & <span>Feedback</span></h2>
+            <p class="hero-desc" style="margin-bottom: 0;">We would love to hear from you. Find our store address details or send us your valuable feedback.</p>
+        </div>
+    </section>
+
+    <!-- Contact & Feedback Content -->
+    <section class="contact-section" style="padding: 5rem 0;">
+        <div class="container contact-grid">
+            
+            <!-- Contact Details Panel -->
+            <div class="contact-info-panel">
+                <div class="section-title-wrapper" style="text-align: left; margin-bottom: 1.5rem;">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h3 class="section-title" style="font-size: 1.8rem; padding-bottom: 0.5rem;">Vrindavan Headquarters</h3>
+                </div>
+                
+                <div class="contact-card-item">
+                    <div class="contact-item-icon"><i class="ri-map-pin-2-line"></i></div>
+                    <div class="contact-item-details">
+                        <h4>Store Address</h4>
+                        <p>108 Vrindavan Heights, Mathura Road, Vrindavan, UP - 281121, India</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card-item">
+                    <div class="contact-item-icon"><i class="ri-phone-line"></i></div>
+                    <div class="contact-item-details">
+                        <h4>Phone Number</h4>
+                        <p>+91 98765 43210 (Mon-Sat, 9 AM - 7 PM)</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card-item">
+                    <div class="contact-item-icon"><i class="ri-mail-send-line"></i></div>
+                    <div class="contact-item-details">
+                        <h4>Email Channels</h4>
+                        <p>support@krishnacollection.com<br>orders@krishnacollection.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card-item">
+                    <div class="contact-item-icon"><i class="ri-time-line"></i></div>
+                    <div class="contact-item-details">
+                        <h4>Operational Hours</h4>
+                        <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>Sunday: Closed for Devotional Seva</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feedback Form Panel -->
+            <div class="feedback-form-panel">
+                <div class="section-title-wrapper" style="text-align: left; margin-bottom: 1.5rem;">
+                    <span class="section-subtitle">Devotee Feedback</span>
+                    <h3 class="section-title" style="font-size: 1.8rem; padding-bottom: 0.5rem;">Share Your Experience</h3>
+                </div>
+                
+                <form id="feedbackForm" onsubmit="handleFeedbackSubmit(event)">
+                    <div class="checkout-form-grid" style="grid-template-columns: 1fr;">
+                        <div class="form-group">
+                            <label for="feedback-name">Your Full Name *</label>
+                            <input type="text" id="feedback-name" required placeholder="Enter your name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedback-email">Email Address *</label>
+                            <input type="email" id="feedback-email" required placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Star Rating *</label>
+                            <div class="star-rating-wrapper" id="star-rating">
+                                <i class="ri-star-line" data-rating="1" onclick="setRating(1)"></i>
+                                <i class="ri-star-line" data-rating="2" onclick="setRating(2)"></i>
+                                <i class="ri-star-line" data-rating="3" onclick="setRating(3)"></i>
+                                <i class="ri-star-line" data-rating="4" onclick="setRating(4)"></i>
+                                <i class="ri-star-line" data-rating="5" onclick="setRating(5)"></i>
+                            </div>
+                            <input type="hidden" id="selected-rating" value="0" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedback-msg">Your Message / Suggestion *</label>
+                            <textarea id="feedback-msg" rows="4" required placeholder="Tell us how you liked our poshaks, singhasans, or other products..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Submit Feedback</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>Krishna Collection</h2>
+                <p>Premium online store providing handcrafted dresses, designer beds, elegant wooden thrones, crowns, and accessories for Laddu Gopal (Bal Gopal) deity.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="social-link"><i class="ri-pinterest-line"></i></a>
+                    <a href="#" class="social-link"><i class="ri-whatsapp-line"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="poshak.html">Poshak</a></li>
+                    <li><a href="singhasan.html">Singhasan & Beds</a></li>
+                    <li><a href="shringar.html">Shringar Ornaments</a></li>
+                    <li><a href="contact.html">Contact & Feedback</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Shop Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="poshak.html">Bal Gopal Clothes</a></li>
+                    <li><a href="singhasan.html">Golden Thrones</a></li>
+                    <li><a href="singhasan.html">Comfortable Beds</a></li>
+                    <li><a href="shringar.html">Mukut & Crowns</a></li>
+                    <li><a href="shringar.html">Jeweled Flutes</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul class="footer-links" style="color: rgba(255, 255, 255, 0.7);">
+                    <li><i class="ri-map-pin-line" style="color: var(--accent);"></i> 108 Vrindavan Heights, Mathura Road, Vrindavan, UP, India</li>
+                    <li><i class="ri-phone-line" style="color: var(--accent);"></i> +91 98765 43210</li>
+                    <li><i class="ri-mail-line" style="color: var(--accent);"></i> support@krishnacollection.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Krishna Collection. Handcrafted with Love & Devotion. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Supabase Database Integrations -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="db.js"></script>
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Set Rating Stars
+        function setRating(rating) {
+            document.getElementById('selected-rating').value = rating;
+            const stars = document.querySelectorAll('#star-rating i');
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.className = 'ri-star-fill selected';
+                } else {
+                    star.className = 'ri-star-line';
+                }
+            });
+        }
+
+        function toggleMobileNav() {
+            const nav = document.getElementById('main-nav');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '100%';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.backgroundColor = '#fff';
+                nav.style.padding = '1.5rem';
+                nav.style.boxShadow = '0 10px 15px rgba(0,0,0,0.05)';
+                nav.style.gap = '1rem';
+                nav.style.borderBottom = '1px solid var(--border-color)';
+            }
+        }
+    </script>
+</body>
+</html>

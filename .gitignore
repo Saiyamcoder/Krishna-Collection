@@ -1,0 +1,4 @@
+scratch/node_modules/
+scratch/package-lock.json
+walkthrough_report.md
+db_schema.sql

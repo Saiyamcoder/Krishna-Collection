@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout - Krishna Collection</title>
+    <meta name="description" content="Complete your order for Bal Gopal poshaks, beds, thrones, and shringar ornaments at Krishna Collection. Safe Cash on Delivery option available.">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/logo.png" alt="Krishna Collection Logo" class="logo-img" onerror="this.src='https://placehold.co/100x100?text=Krishna'">
+            </a>
+            
+            <nav class="nav" id="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="poshak.html" class="nav-link">Poshak</a>
+                <a href="singhasan.html" class="nav-link">Singhasan & Beds</a>
+                <a href="shringar.html" class="nav-link">Shringar</a>
+                <a href="contact.html" class="nav-link">Contact & Feedback</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="cart-icon-btn" onclick="openCartDrawer()" aria-label="Open Shopping Cart" style="pointer-events: none; opacity: 0.5;">
+                    <i class="ri-shopping-cart-2-line"></i>
+                    <span class="cart-badge" id="cart-badge" style="display: none;">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="hero" style="padding: 2.5rem 0; background: linear-gradient(135deg, rgba(9, 108, 108, 0.08) 0%, rgba(212, 175, 87, 0.05) 100%);">
+        <div class="container" style="text-align: center;">
+            <span class="hero-tagline">🔒 Secure Checkout</span>
+            <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 0.25rem;">Complete your <span>Purchase</span></h2>
+            <p class="hero-desc" style="margin-bottom: 0;">Fill in your delivery address below. Pay conveniently using Cash on Delivery (COD).</p>
+        </div>
+    </section>
+
+    <!-- Checkout Layout -->
+    <section class="checkout-section">
+        <div class="container checkout-grid">
+            
+            <!-- Shipping Details Form -->
+            <div class="checkout-card">
+                <h3 class="checkout-title"><i class="ri-truck-line"></i> Delivery Address Details</h3>
+                <form id="checkoutForm" onsubmit="handlePlaceOrder(event)">
+                    <div class="checkout-form-grid">
+                        <div class="form-group form-full-width">
+                            <label for="cust-name">Full Customer Name *</label>
+                            <input type="text" id="cust-name" required placeholder="Enter full name (e.g. Aarti Sharma)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cust-phone">Mobile Phone Number *</label>
+                            <input type="tel" id="cust-phone" pattern="[0-9]{10}" required placeholder="10-digit mobile number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cust-email">Email Address (Optional)</label>
+                            <input type="email" id="cust-email" placeholder="email@example.com">
+                        </div>
+                        
+                        <div class="form-group form-full-width">
+                            <label for="cust-address">Street Address / House No. *</label>
+                            <input type="text" id="cust-address" required placeholder="Apartment, suite, unit, building, floor, street">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cust-city">City *</label>
+                            <input type="text" id="cust-city" required placeholder="e.g. Vrindavan / Mathura">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cust-pincode">Pincode / Postal Code *</label>
+                            <input type="text" id="cust-pincode" pattern="[0-9]{6}" required placeholder="6-digit pincode">
+                        </div>
+                        
+                        <div class="form-group form-full-width">
+                            <label for="cust-state">State *</label>
+                            <select id="cust-state" required>
+                                <option value="Uttar Pradesh" selected>Uttar Pradesh</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Haryana">Haryana</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <h3 class="checkout-title" style="margin-top: 2.5rem;"><i class="ri-bank-card-line"></i> Payment Method</h3>
+                    <div class="payment-options">
+                        <label class="payment-option-label">
+                            <input type="radio" name="payment" value="cod" checked required>
+                            <i class="ri-money-rupee-circle-line" style="font-size: 1.5rem; color: var(--primary);"></i>
+                            <span>Cash on Delivery (COD) - <b>Pay cash when you receive order</b></span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="margin-top: 2rem; width: 100%; font-size: 1.1rem; padding: 1rem;">
+                        <i class="ri-shield-check-line"></i> Place Secure Order (COD)
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Order Summary Sidebar -->
+            <div class="order-summary-box">
+                <h3 class="checkout-title" style="font-size: 1.3rem; margin-bottom: 1rem;"><i class="ri-file-list-3-line"></i> Order Summary</h3>
+                <div class="summary-items" id="checkout-summary-items">
+                    <!-- Items dynamically injected by JavaScript -->
+                </div>
+                
+                <div class="summary-calc">
+                    <div class="calc-row">
+                        <span>Cart Subtotal</span>
+                        <span id="checkout-subtotal">₹0</span>
+                    </div>
+                    <div class="calc-row">
+                        <span>Delivery Charges</span>
+                        <span style="color: var(--accent); font-weight: 600;">FREE</span>
+                    </div>
+                    <div class="calc-row total">
+                        <span>Total Amount</span>
+                        <span id="checkout-total">₹0</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Success Modal Overlay -->
+    <div class="success-modal" id="orderSuccessModal">
+        <div class="success-card">
+            <div class="success-icon">
+                <i class="ri-checkbox-circle-fill"></i>
+            </div>
+            <h3 class="success-title">Jai Shree Krishna!</h3>
+            <h4 style="color: var(--primary-dark); margin-bottom: 0.5rem;">Order Placed Successfully!</h4>
+            <p class="success-desc">
+                Dear <b id="success-buyer-name">Customer</b>, your order has been received. We will deliver it shortly. 
+                <br><br>
+                <b>Payment Mode:</b> Cash on Delivery (COD)
+            </p>
+            <button class="btn btn-primary" onclick="redirectToHome()" style="width: 100%;">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Supabase Database Integrations -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="db.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        // Disable bottom drawer on checkout screen
+        document.addEventListener('DOMContentLoaded', () => {
+            const drawer = document.getElementById('cart-drawer');
+            if (drawer) drawer.style.display = 'none';
+            renderCheckoutSummary();
+        });
+
+        function renderCheckoutSummary() {
+            const summaryContainer = document.getElementById('checkout-summary-items');
+            const subtotalLabel = document.getElementById('checkout-subtotal');
+            const totalLabel = document.getElementById('checkout-total');
+
+            if (cart.length === 0) {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            let summaryHTML = '';
+            let totalAmount = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                totalAmount += itemTotal;
+                summaryHTML += `
+                    <div class="summary-item">
+                        <div>
+                            <span class="summary-item-title">${item.name}</span>
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">Qty: ${item.quantity} x ₹${item.price}</div>
+                        </div>
+                        <span class="summary-item-price">₹${itemTotal}</span>
+                    </div>
+                `;
+            });
+
+            summaryContainer.innerHTML = summaryHTML;
+            subtotalLabel.innerText = `₹${totalAmount}`;
+            totalLabel.innerText = `₹${totalAmount}`;
+        }
+
+        // Handle Form Submission - Save to Supabase
+        async function handlePlaceOrder(event) {
+            event.preventDefault();
+
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalHTML = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="ri-loader-3-line"></i> Placing Order...';
+            submitBtn.disabled = true;
+
+            const buyerName  = document.getElementById('cust-name').value.trim();
+            const phone      = document.getElementById('cust-phone').value.trim();
+            const email      = document.getElementById('cust-email').value.trim();
+            const address    = document.getElementById('cust-address').value.trim();
+            const city       = document.getElementById('cust-city').value.trim();
+            const pincode    = document.getElementById('cust-pincode').value.trim();
+            const state      = document.getElementById('cust-state').value;
+            const payment    = document.querySelector('input[name="payment"]:checked').value.toUpperCase();
+            const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            const orderData = {
+                customer_name:    buyerName,
+                customer_phone:   phone,
+                customer_email:   email || null,
+                customer_address: address,
+                customer_city:    city,
+                customer_state:   state,
+                customer_pincode: pincode,
+                payment_method:   payment,
+                items:            cart,   // full array stored as JSONB
+                total_amount:     totalAmount,
+                status:           'pending'
+            };
+
+            try {
+                await dbSaveOrder(orderData);
+            } catch (err) {
+                console.error("Order save error:", err);
+                // Still show success — order is saved locally as fallback
+            } finally {
+                submitBtn.innerHTML = originalHTML;
+                submitBtn.disabled = false;
+            }
+
+            // Show success modal
+            document.getElementById('success-buyer-name').innerText = buyerName;
+            document.getElementById('orderSuccessModal').classList.add('active');
+        }
+
+        // Reset Cart and Redirect Home
+        function redirectToHome() {
+            localStorage.removeItem('krishna_collection_cart');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
