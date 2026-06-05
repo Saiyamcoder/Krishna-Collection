@@ -2,15 +2,15 @@
 
 // Local Fallbacks in case Supabase is not seeded or fails
 const LOCAL_PRODUCTS_FALLBACK = [
-    { id: 'poshak-01', name: 'Royal Peacock Designer Poshak', price: 799, image: 'assets/poshak_royal.png', category: 'poshak', rating: 5, badge: 'Best Seller', description: 'Beautiful royal peacock designer poshak handcrafted from pure silk.' },
-    { id: 'poshak-02', name: 'Premium Velvet Pearl Poshak', price: 999, image: 'assets/poshak_velvet.png', category: 'poshak', rating: 5, badge: 'New Arrival', description: 'Luxurious red velvet poshak studded with high-quality pearls.' },
-    { id: 'singhasan-01', name: 'Handcrafted Golden Singhasan', price: 1899, image: 'assets/singhasan_royal.png', category: 'singhasan', rating: 5, badge: 'Divine Choice', description: 'Premium quality wooden throne painted with royal gold.' },
-    { id: 'palag-01', name: 'Premium Velvet Laddu Gopal Palag', price: 1249, image: 'assets/palag_bed.png', category: 'singhasan', rating: 5, badge: 'Trending', description: 'Super soft cushioned bed lined with velvet for Laddu Gopal.' },
-    { id: 'mukut-01', name: 'Premium Pearl & Feather Mukut', price: 349, image: 'assets/mukut_shringar.png', category: 'shringar', rating: 5, badge: 'Divine Shringar', description: 'Handcrafted crown adorned with peacock feathers and pearls.' },
-    { id: 'mukut-02', name: 'Royal Blue Diamond Mukut', price: 499, image: 'assets/mukut_royal_blue.jpg', category: 'shringar', rating: 5, badge: 'Premium Pick', description: 'Royal blue Mukut studded with beautiful diamond crystals.' },
-    { id: 'mukut-03', name: 'Designer Peacock Pearl Mukut', price: 599, image: 'assets/mukut_peacock_designer.jpg', category: 'shringar', rating: 5, badge: 'Best Seller', description: 'Specially designed crown with peacock theme and pearl chains.' },
-    { id: 'mukut-04', name: 'Vrindavan Peacock Pagdi Mukut', price: 649, image: 'assets/mukut_peacock_stand.jpg', category: 'shringar', rating: 5, badge: 'Special Edition', description: 'Traditional Vrindavan style pagdi mukut for festival days.' },
-    { id: 'bansuri-01', name: 'Royal Gold Plated Jeweled Bansuri', price: 199, image: 'assets/bansuri_gold.png', category: 'shringar', rating: 4, badge: 'Popular', description: 'Gold-plated flute decorated with sparkling gems.' }
+    { id: 'poshak-01', name: 'Royal Peacock Designer Poshak', price: 799, image: 'assets/poshak_royal.webp', category: 'poshak', rating: 5, badge: 'Best Seller', description: 'Beautiful royal peacock designer poshak handcrafted from pure silk.' },
+    { id: 'poshak-02', name: 'Premium Velvet Pearl Poshak', price: 999, image: 'assets/poshak_velvet.webp', category: 'poshak', rating: 5, badge: 'New Arrival', description: 'Luxurious red velvet poshak studded with high-quality pearls.' },
+    { id: 'singhasan-01', name: 'Handcrafted Golden Singhasan', price: 1899, image: 'assets/singhasan_royal.webp', category: 'singhasan', rating: 5, badge: 'Divine Choice', description: 'Premium quality wooden throne painted with royal gold.' },
+    { id: 'palag-01', name: 'Premium Velvet Laddu Gopal Palag', price: 1249, image: 'assets/palag_bed.webp', category: 'singhasan', rating: 5, badge: 'Trending', description: 'Super soft cushioned bed lined with velvet for Laddu Gopal.' },
+    { id: 'mukut-01', name: 'Premium Pearl & Feather Mukut', price: 349, image: 'assets/mukut_shringar.webp', category: 'shringar', rating: 5, badge: 'Divine Shringar', description: 'Handcrafted crown adorned with peacock feathers and pearls.' },
+    { id: 'mukut-02', name: 'Royal Blue Diamond Mukut', price: 499, image: 'assets/mukut_royal_blue.webp', category: 'shringar', rating: 5, badge: 'Premium Pick', description: 'Royal blue Mukut studded with beautiful diamond crystals.' },
+    { id: 'mukut-03', name: 'Designer Peacock Pearl Mukut', price: 599, image: 'assets/mukut_peacock_designer.webp', category: 'shringar', rating: 5, badge: 'Best Seller', description: 'Specially designed crown with peacock theme and pearl chains.' },
+    { id: 'mukut-04', name: 'Vrindavan Peacock Pagdi Mukut', price: 649, image: 'assets/mukut_peacock_stand.webp', category: 'shringar', rating: 5, badge: 'Special Edition', description: 'Traditional Vrindavan style pagdi mukut for festival days.' },
+    { id: 'bansuri-01', name: 'Royal Gold Plated Jeweled Bansuri', price: 199, image: 'assets/bansuri_gold.webp', category: 'shringar', rating: 4, badge: 'Popular', description: 'Gold-plated flute decorated with sparkling gems.' }
 ];
 
 const LOCAL_PAGES_FALLBACK = {
@@ -20,7 +20,7 @@ const LOCAL_PAGES_FALLBACK = {
         slug: 'home',
         subtitle: '✨ Pure Handcrafted Devotion',
         description: 'Explore our hand-selected collections of premium designer peacock-feather dresses, handcrafted royal golden beds, thrones, and jeweled flutes made specifically for Laddu Gopal.',
-        hero_image: 'assets/poshak_royal.png',
+        hero_image: 'assets/poshak_royal.webp',
         content: {
             hero_title: "Decorate Your Bal Gopal With Divine Royal Splendor",
             hero_btn_text: "Shop Poshak Now",
@@ -34,7 +34,7 @@ const LOCAL_PAGES_FALLBACK = {
         slug: 'poshak',
         subtitle: '🌸 Royal & Soft Fabrics',
         description: 'Special handcrafted silk, satin, and red velvet clothes with heavy gold zari work to make Laddu Gopal look absolutely royal.',
-        hero_image: 'assets/poshak_royal.png',
+        hero_image: 'assets/poshak_royal.webp',
         content: {}
     },
     'singhasan': {
@@ -43,7 +43,7 @@ const LOCAL_PAGES_FALLBACK = {
         slug: 'singhasan',
         subtitle: '👑 Handcrafted Royal Furniture',
         description: 'Provide absolute royal comfort to your Bal Gopal with premium golden wooden Singhasans and soft, velvet cushioned Palags.',
-        hero_image: 'assets/singhasan_royal.png',
+        hero_image: 'assets/singhasan_royal.webp',
         content: {}
     },
     'shringar': {
@@ -52,7 +52,7 @@ const LOCAL_PAGES_FALLBACK = {
         slug: 'shringar',
         subtitle: '💎 Divine Royal Accessories',
         description: 'Adorn your Laddu Gopal with our premium handpicked heavy stone work crowns (mukut), pearl necklaces (mala), and jeweled gold flutes.',
-        hero_image: 'assets/mukut_shringar.png',
+        hero_image: 'assets/mukut_shringar.webp',
         content: {}
     },
     'contact': {
@@ -61,7 +61,7 @@ const LOCAL_PAGES_FALLBACK = {
         slug: 'contact',
         subtitle: '📞 Get in Touch',
         description: 'Have questions, feedback, or want custom orders? Reach out to us, and we will serve you with joy.',
-        hero_image: 'assets/poshak_royal.png',
+        hero_image: 'assets/poshak_royal.webp',
         content: {}
     }
 };
@@ -72,7 +72,7 @@ const LOCAL_SETTINGS_FALLBACK = {
     'store_address': '108 Vrindavan Heights, Mathura Road, Vrindavan, UP, India',
     'store_phone': '+91 98765 43210',
     'store_email': 'support@krishnacollection.com',
-    'store_logo': 'assets/logo.png',
+    'store_logo': 'assets/logo.webp',
     'social_facebook': '#',
     'social_instagram': '#',
     'social_pinterest': '#',

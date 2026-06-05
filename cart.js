@@ -6,19 +6,19 @@
 // Global Product Database
 const PRODUCT_DB = {
     // Poshaks
-    'poshak-01': { id: 'poshak-01', name: 'Royal Peacock Designer Poshak', price: 799, image: 'assets/poshak_royal.png', category: 'poshak', rating: 5, badge: 'Best Seller' },
-    'poshak-02': { id: 'poshak-02', name: 'Premium Velvet Pearl Poshak', price: 999, image: 'assets/poshak_velvet.png', category: 'poshak', rating: 5, badge: 'New Arrival' },
+    'poshak-01': { id: 'poshak-01', name: 'Royal Peacock Designer Poshak', price: 799, image: 'assets/poshak_royal.webp', category: 'poshak', rating: 5, badge: 'Best Seller' },
+    'poshak-02': { id: 'poshak-02', name: 'Premium Velvet Pearl Poshak', price: 999, image: 'assets/poshak_velvet.webp', category: 'poshak', rating: 5, badge: 'New Arrival' },
     
     // Singhasans
-    'singhasan-01': { id: 'singhasan-01', name: 'Handcrafted Golden Singhasan', price: 1899, image: 'assets/singhasan_royal.png', category: 'singhasan', rating: 5, badge: 'Divine Choice' },
-    'palag-01': { id: 'palag-01', name: 'Premium Velvet Laddu Gopal Palag', price: 1249, image: 'assets/palag_bed.png', category: 'singhasan', rating: 5, badge: 'Trending' },
+    'singhasan-01': { id: 'singhasan-01', name: 'Handcrafted Golden Singhasan', price: 1899, image: 'assets/singhasan_royal.webp', category: 'singhasan', rating: 5, badge: 'Divine Choice' },
+    'palag-01': { id: 'palag-01', name: 'Premium Velvet Laddu Gopal Palag', price: 1249, image: 'assets/palag_bed.webp', category: 'singhasan', rating: 5, badge: 'Trending' },
     
     // Shringars
-    'mukut-01': { id: 'mukut-01', name: 'Premium Pearl & Feather Mukut', price: 349, image: 'assets/mukut_shringar.png', category: 'shringar', rating: 5, badge: 'Divine Shringar' },
-    'mukut-02': { id: 'mukut-02', name: 'Royal Blue Diamond Mukut', price: 499, image: 'assets/mukut_royal_blue.jpg', category: 'shringar', rating: 5, badge: 'Premium Pick' },
-    'mukut-03': { id: 'mukut-03', name: 'Designer Peacock Pearl Mukut', price: 599, image: 'assets/mukut_peacock_designer.jpg', category: 'shringar', rating: 5, badge: 'Best Seller' },
-    'mukut-04': { id: 'mukut-04', name: 'Vrindavan Peacock Pagdi Mukut', price: 649, image: 'assets/mukut_peacock_stand.jpg', category: 'shringar', rating: 5, badge: 'Special Edition' },
-    'bansuri-01': { id: 'bansuri-01', name: 'Royal Gold Plated Jeweled Bansuri', price: 199, image: 'assets/bansuri_gold.png', category: 'shringar', rating: 4, badge: 'Popular' }
+    'mukut-01': { id: 'mukut-01', name: 'Premium Pearl & Feather Mukut', price: 349, image: 'assets/mukut_shringar.webp', category: 'shringar', rating: 5, badge: 'Divine Shringar' },
+    'mukut-02': { id: 'mukut-02', name: 'Royal Blue Diamond Mukut', price: 499, image: 'assets/mukut_royal_blue.webp', category: 'shringar', rating: 5, badge: 'Premium Pick' },
+    'mukut-03': { id: 'mukut-03', name: 'Designer Peacock Pearl Mukut', price: 599, image: 'assets/mukut_peacock_designer.webp', category: 'shringar', rating: 5, badge: 'Best Seller' },
+    'mukut-04': { id: 'mukut-04', name: 'Vrindavan Peacock Pagdi Mukut', price: 649, image: 'assets/mukut_peacock_stand.webp', category: 'shringar', rating: 5, badge: 'Special Edition' },
+    'bansuri-01': { id: 'bansuri-01', name: 'Royal Gold Plated Jeweled Bansuri', price: 199, image: 'assets/bansuri_gold.webp', category: 'shringar', rating: 4, badge: 'Popular' }
 };
 
 // Initialize Cart Array
@@ -164,7 +164,7 @@ function renderCartDrawer() {
         itemsHTML += `
             <div class="cart-drawer-item">
                 <div class="cart-item-info">
-                    <img src="${item.image}" alt="${item.name}" class="cart-item-thumb" onerror="this.src='assets/poshak_royal.png'">
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-thumb" onerror="this.src='assets/poshak_royal.webp'">
                     <div>
                         <h4 class="cart-item-name">${item.name}</h4>
                         <div class="cart-item-price">₹${item.price} each</div>

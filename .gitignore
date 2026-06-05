@@ -2,3 +2,10 @@ scratch/node_modules/
 scratch/package-lock.json
 walkthrough_report.md
 db_schema.sql
+node_modules/
+package.json
+package-lock.json
+convert_to_webp.js
+assets/*.png
+assets/*.jpg
+assets/*.jpeg
